@@ -92,8 +92,8 @@
 
     .profile__avatar {
         margin-bottom:0 0 12px;
-        height: 80px;
-        weight: 80px; 
+        height: 80px; 
+        width: 80px;
     }
 
     .profile__name {
