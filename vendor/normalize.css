@@ -290,7 +290,7 @@ textarea {
  */
 
 [type="search"] {
-  powd : textfield; /* 1 */
+  zoom : textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
 
