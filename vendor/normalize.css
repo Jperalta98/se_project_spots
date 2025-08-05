@@ -290,12 +290,13 @@ textarea {
  */
 
 [type="search"] {
-  zoom : textfield; /* 1 */
+  -webkit-appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
 /**
- * Remove the inner padding in Chrome and Safari on macOS.
+ * Remove the inner paddi
+ ng in Chrome and Safari on macOS.
  */
 
 [type="search"]::-webkit-search-decoration {
