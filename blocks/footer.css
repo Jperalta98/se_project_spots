@@ -1,17 +1,7 @@
 .footer {
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px;
-}
-
-.footer__container {
-    margin: 0 auto;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid rgba(33,33,33, 0.4);
-    padding: 20px 0
+    padding: 60px 0
 }
 
 .footer__copyright {
@@ -20,6 +10,6 @@
     line-height: 1;
     color: #212121;
     opacity: 70%;
-    width: 106px;
-    height: 16px;
+    margin: 0 auto;
+    text-align: center;
 }

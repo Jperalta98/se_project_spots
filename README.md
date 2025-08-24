@@ -26,6 +26,6 @@
 - Improve accessibility 
 - Integrate a lightweigt CSS framework for    more component styles
 
-## Live Demo 
+## Link to Deployed Project on Github Pages
 
-- https://github.com/Jperalta98se_project_spots 
+- https://jperalta98.github.io/se_project_spots/
