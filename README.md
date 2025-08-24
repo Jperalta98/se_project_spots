@@ -29,3 +29,7 @@
 ## Link to Deployed Project on Github Pages
 
 - https://jperalta98.github.io/se_project_spots/
+
+## Link to Project Video
+
+- https://drive.google.com/file/d/1Xq414j-2RNU5zXrCQXFVVkD74zFkLxz1/view?usp=sharing
