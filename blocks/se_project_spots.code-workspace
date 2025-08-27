@@ -1,10 +1,10 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "se_project_spots"
-	}
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "se_project_spots"
+  }
 }
