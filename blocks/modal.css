@@ -99,9 +99,9 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-   padding: 22px 12px 12px;
-}
-  
+    padding: 22px 12px 12px;
+  }
+
   .modal__title {
     font-size: 20px;
   }
@@ -120,6 +120,6 @@
 
   .modal__close-btn {
     top: 12px;
-    right: 12;
+    right: 12px;
   }
 }
