@@ -98,14 +98,7 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    max-width: 300px;
-    padding: 12px;
-    gap: 24px;
-    margin: auto;
-    top: 134px;
-    left: 10px;
-    border-radius: 8px;
-    object-fit: contain;
+   padding: 22px 12px 12px;
 }
   
   .modal__title {
