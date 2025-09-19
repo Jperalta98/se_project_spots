@@ -4,7 +4,8 @@ const editCloseButton = editModal.querySelector(".modal__close-btn");
 const editProfileForm = editModal.querySelector(".modal__form");
 const editProfileNameInput = editModal.querySelector("#profile-name-input");
 const editProfileDescriptionInput = editModal.querySelector(
-  "#profile-description-input");
+  "#profile-description-input"
+);
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
@@ -17,20 +18,29 @@ const newPostCaptionInput = newPostModal.querySelector(
   "#profile-caption-input"
 );
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 editButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editModal.classList.add("modal_is-opened");
+  openModal(editModal);
 });
+
 editCloseButton.addEventListener("click", function () {
-  editModal.classList.remove("modal_is-opened");
+  closeModal(editModal);
 });
 
 newPostButton.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 newPostCloseButton.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
@@ -38,14 +48,14 @@ newPostForm.addEventListener("submit", handleAddCardSubmit);
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
- profileNameEl.textContent = editProfileNameInput.value;
+  profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-    editModal.classList.remove("modal_is-opened");
+  closeModal(editModal);
 }
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-console.log("Image Link:", newPostImageInput.value);
-console.log("Caption", newPostCaptionInput.value);
-  newPostModal.classList.remove("modal_is-opened");
+  console.log("Image Link:", newPostImageInput.value);
+  console.log("Caption", newPostCaptionInput.value);
+  closeModal(newPostModal);
 }
