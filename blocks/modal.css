@@ -14,6 +14,10 @@
   transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
 
+.modal_type_preview {
+  padding: 0 16px;
+}
+
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
@@ -41,6 +45,23 @@
   opacity: 40%;
   cursor: pointer;
   border: none;
+}
+.modal__close-btn:hover {
+  opacity: 100%;
+}
+
+.modal__close-btn_type_preview {
+  top: 0;
+  right: -52.5px;
+  border-radius: 2px;
+  width: 40px;
+  height: 40px;
+  border: none;
+    background: center / cover no-repeat url(../images/Group\ 27.png);
+}
+
+.modal__close-btn_type_preview:hover {
+  opacity: 40%;
 }
 
 .modal__close-btn:hover {
@@ -97,7 +118,36 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 627px) {
+.modal__image-container {
+  position: relative;
+  border-radius: 8px;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  border-radius: 8px;
+  background-color: #212121;
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  width: 198px;
+  height: 24x;
+  padding: 4px 8px;
+}
+
+@media screen and (max-width: 480px) {
   .modal__container {
     padding: 22px 12px 12px;
   }
@@ -119,7 +169,18 @@
   }
 
   .modal__close-btn {
-    top: 12px;
+    top: 22px;
     right: 12px;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0;
+  }
+
+  .modal__image {
+    max-width: unset;
   }
 }
