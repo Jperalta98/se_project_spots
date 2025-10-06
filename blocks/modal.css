@@ -64,10 +64,6 @@
   opacity: 40%;
 }
 
-.modal__close-btn:hover {
-  opacity: 100%;
-}
-
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
@@ -118,6 +114,10 @@
   cursor: pointer;
 }
 
+.modal__submit-btn:hover {
+  opacity: 80%;
+}
+
 .modal__image-container {
   position: relative;
   border-radius: 8px;
@@ -143,10 +143,12 @@
   text-align: center;
   box-sizing: border-box;
   width: 198px;
-  height: 24x;
+  height: 24px;
   padding: 4px 8px;
+  left:0;
+  top: calc(100%+10px);
 }
-
+ 
 @media screen and (max-width: 480px) {
   .modal__container {
     padding: 22px 12px 12px;
