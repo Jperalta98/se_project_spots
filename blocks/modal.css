@@ -41,7 +41,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background: center / cover no-repeat url(../images/close\ icon.svg);
+  background: center / cover no-repeat url(../images/close.svg);
   opacity: 40%;
   cursor: pointer;
   border: none;
@@ -53,11 +53,8 @@
 .modal__close-btn_type_preview {
   top: 0;
   right: -52.5px;
-  border-radius: 2px;
-  width: 40px;
-  height: 40px;
-  border: none;
-    background: center / cover no-repeat url(../images/Group\ 27.png);
+  background: center / cover no-repeat url(../images/close2.svg);
+  opacity: 1;
 }
 
 .modal__close-btn_type_preview:hover {
@@ -142,13 +139,12 @@
   position: absolute;
   text-align: center;
   box-sizing: border-box;
-  width: 198px;
-  height: 24px;
   padding: 4px 8px;
-  left:0;
-  top: calc(100%+10px);
+  left: 0;
+  top: calc(100% + 10px);
+  margin: 0;
 }
- 
+
 @media screen and (max-width: 480px) {
   .modal__container {
     padding: 22px 12px 12px;
