@@ -52,7 +52,7 @@
 }
 
 .card__delete-btn {
-  background: center / cover no-repeat transparent url(../images/Delete\ .png);
+  background: center / cover no-repeat transparent url(../images/Delete.png);
   width: 32px;
   height: 32px;
   position: absolute;
