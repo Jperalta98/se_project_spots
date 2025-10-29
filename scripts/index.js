@@ -1,3 +1,5 @@
+
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -44,10 +46,9 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostButton = document.querySelector(".profile__add-btn");
 const newPostCloseButton = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const newPostImageInput = newPostModal.querySelector("#profile-image-input");
-const newPostCaptionInput = newPostModal.querySelector(
-  "#profile-caption-input"
-);
+const newPostCaptionInput = newPostModal.querySelector("#profile-caption-input");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -128,7 +129,13 @@ function handleEditProfileSubmit(evt) {
 
 newPostButton.addEventListener("click", function () {
   openModal(newPostModal);
+toggleButtonState(
+  newPostForm.querySelectorAll(settings.inputSelector),
+  newPostSubmitBtn,
+  settings
+);
 });
+
 newPostCloseButton.addEventListener("click", function () {
   closeModal(newPostModal);
 });
@@ -143,9 +150,11 @@ function handleAddCardSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-
-  newPostForm.reset();
-  closeModal(newPostModal);
+  
+  disableButton(newPostSubmitBtn, settings);
+  
+evt.target.reset();
+closeModal(newPostModal);
 }
 
 initialCards.forEach(function (item) {

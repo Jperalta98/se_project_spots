@@ -30,6 +30,11 @@
 
 - https://jperalta98.github.io/se_project_spots/
 
-## Link to Project Video
+## Project Pitch Videos
 
-- https://drive.google.com/file/d/1Xq414j-2RNU5zXrCQXFVVkD74zFkLxz1/view?usp=sharing
+Check out these videos, where I describe my project
+and some challenges I faced while building it:
+
+- [First Video Title](https://drive.google.com/file/d/1Xq414j-2RNU5zXrCQXFVVkD74zFkLxz1/view?usp=sharing)
+
+- [Second Video Title](ADD_LINK_HERE)
