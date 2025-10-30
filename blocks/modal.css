@@ -42,7 +42,7 @@
   width: 40px;
   height: 40px;
   background: center / cover no-repeat url(../images/close.svg);
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
   border: none;
 }
@@ -58,7 +58,7 @@
 }
 
 .modal__close-btn_type_preview:hover {
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__title {
@@ -106,15 +106,23 @@
   border: 1px solid rgb(33, 33, 33);
 }
 
+.modal__input_type_error {
+  border: 2px solid red;
+}
+
 .modal__error {
   display: block;
   margin: 8px 0 0;
-  color: red; 
+  color: red;
   opacity: 70%;
   font-weight: 500;
   line-height: 1.1;
   font-size: 16px;
   letter-spacing: 0;
+}
+
+.modal__error_visible {
+  opacity: 1;
 }
 
 .modal__submit-btn {
@@ -127,12 +135,12 @@
   padding: 18px 32px;
   gap: 8px;
   cursor: pointer;
-  color: #FCF5E5;
-  background-color:#212121;
+  color: #fcf5e5;
+  background-color: #212121;
 }
 
 .modal__submit-btn_disabled {
-  opacity: 50%;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 

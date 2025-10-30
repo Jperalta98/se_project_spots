@@ -1,5 +1,3 @@
-
-
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -48,7 +46,9 @@ const newPostCloseButton = newPostModal.querySelector(".modal__close-btn");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const newPostImageInput = newPostModal.querySelector("#profile-image-input");
-const newPostCaptionInput = newPostModal.querySelector("#profile-caption-input");
+const newPostCaptionInput = newPostModal.querySelector(
+  "#profile-caption-input"
+);
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
@@ -80,32 +80,40 @@ function getCardElement(data) {
   });
 
   cardImageEl.addEventListener("click", () => {
-      console.log("Card image clicked:", data.link);
+    console.log("Card image clicked:", data.link);
     previewImageEl.src = data.link;
     previewImageEl.alt = data.name;
     previewTitleEl.textContent = data.name;
 
-      openModal(previewModal);
+    openModal(previewModal);
   });
 
   return cardElement;
 }
 
 function openModal(modal) {
-   console.log("Opening modal:", modal.id);
+  console.log("Opening modal:", modal.id);
   modal.classList.add("modal_is-opened");
+  modal.addEventListener("click", handleOverlayClick);
 }
 
 function closeModal(modal) {
   console.log("Closing modal:", modal.id);
   modal.classList.remove("modal_is-opened");
+  modal.removeEventListener("click", handleOverlayClick);
 }
 
-  previewModalCloseBtn.addEventListener("click", function () {
+function handleOverlayClick(event) {
+  if (event.target === event.currentTarget) {
+    closeModal(event.currentTarget);
+  }
+}
+
+previewModalCloseBtn.addEventListener("click", function () {
   closeModal(previewModal);
 
   console.log("previewModalCloseBtn is:", previewModalCloseBtn);
-  });
+});
 
 editButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
@@ -129,11 +137,11 @@ function handleEditProfileSubmit(evt) {
 
 newPostButton.addEventListener("click", function () {
   openModal(newPostModal);
-toggleButtonState(
-  newPostForm.querySelectorAll(settings.inputSelector),
-  newPostSubmitBtn,
-  settings
-);
+  toggleButtonState(
+    newPostForm.querySelectorAll(settings.inputSelector),
+    newPostSubmitBtn,
+    settings
+  );
 });
 
 newPostCloseButton.addEventListener("click", function () {
@@ -150,11 +158,11 @@ function handleAddCardSubmit(evt) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  
+
   disableButton(newPostSubmitBtn, settings);
-  
-evt.target.reset();
-closeModal(newPostModal);
+
+  evt.target.reset();
+  closeModal(newPostModal);
 }
 
 initialCards.forEach(function (item) {
