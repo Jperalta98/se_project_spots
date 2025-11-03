@@ -147,17 +147,17 @@ function handleEditProfileSubmit(evt) {
 }
 
 newPostButton.addEventListener("click", function () {
-newPostForm.reset()
-disableButton(newPostSubmitBtn, settings);
+  newPostForm.reset();
+  disableButton(newPostSubmitBtn, settings);
 
-const inputList = Array.from(
-  newPostForm.querySelectorAll(settings.inputSelector)
-);
-inputList.forEach((InputElement) => {
-  hideInputError(newPostForm, InputElement, settings);
-});
+  const inputList = Array.from(
+    newPostForm.querySelectorAll(settings.inputSelector)
+  );
+  inputList.forEach((InputElement) => {
+    hideInputError(newPostForm, InputElement, settings);
+  });
 
-openModal(newPostModal);
+  openModal(newPostModal);
 });
 
 newPostCloseButton.addEventListener("click", function () {
