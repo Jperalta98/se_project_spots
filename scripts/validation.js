@@ -5,7 +5,7 @@ const settings = {
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error",
-  errorActiveClass: "modal__error_visible",
+  errorActiveClass: "modal__error_",
 };
 
 const showInputError = (formElement, inputElement, errorMsg, config) => {

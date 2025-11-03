@@ -12,6 +12,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 .modal_type_preview {

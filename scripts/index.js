@@ -95,12 +95,23 @@ function openModal(modal) {
   console.log("Opening modal:", modal.id);
   modal.classList.add("modal_is-opened");
   modal.addEventListener("click", handleOverlayClick);
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   console.log("Closing modal:", modal.id);
   modal.classList.remove("modal_is-opened");
   modal.removeEventListener("click", handleOverlayClick);
+  document.removeEventListener("keydown", handleEscClose);
+}
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
 }
 
 function handleOverlayClick(event) {
@@ -136,12 +147,17 @@ function handleEditProfileSubmit(evt) {
 }
 
 newPostButton.addEventListener("click", function () {
-  openModal(newPostModal);
-  toggleButtonState(
-    newPostForm.querySelectorAll(settings.inputSelector),
-    newPostSubmitBtn,
-    settings
-  );
+newPostForm.reset()
+disableButton(newPostSubmitBtn, settings);
+
+const inputList = Array.from(
+  newPostForm.querySelectorAll(settings.inputSelector)
+);
+inputList.forEach((InputElement) => {
+  hideInputError(newPostForm, InputElement, settings);
+});
+
+openModal(newPostModal);
 });
 
 newPostCloseButton.addEventListener("click", function () {
