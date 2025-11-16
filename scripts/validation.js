@@ -5,7 +5,7 @@ const settings = {
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error",
-  errorActiveClass: "modal__error_",
+  errorActiveClass: "modal__error_visible",
 };
 
 const showInputError = (formElement, inputElement, errorMsg, config) => {
@@ -53,6 +53,19 @@ const toggleButtonState = (inputList, buttonEl, config) => {
 const disableButton = (buttonEl, config) => {
   buttonEl.disabled = true;
   buttonEl.classList.add(config.inactiveButtonClass);
+};
+
+const resetValidation = (formElement, config) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(config.inputSelector)
+  );
+  const buttonEl = formElement.querySelector(config.submitButtonSelector);
+  
+  inputList.forEach((input) => {
+    hideInputError(formElement, input, config);
+  });
+
+  toggleButtonState(inputList, buttonEl, config);
 };
 
 const setEventListeners = (formElement, config) => {

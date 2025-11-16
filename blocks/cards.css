@@ -21,7 +21,7 @@
 
   .cards__list {
     gap: 20px;
-    grid-template-columns: repeat(auto-fit,  minmax(288px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
     box-sizing: border-box;
     width: 100%;
     overflow-x: hidden;

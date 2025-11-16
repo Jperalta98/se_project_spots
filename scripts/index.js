@@ -129,6 +129,9 @@ previewModalCloseBtn.addEventListener("click", function () {
 editButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+
+  resetValidation(editProfileForm, settings);
+
   openModal(editModal);
 });
 
@@ -147,17 +150,8 @@ function handleEditProfileSubmit(evt) {
 }
 
 newPostButton.addEventListener("click", function () {
-  newPostForm.reset();
-  disableButton(newPostSubmitBtn, settings);
-
-  const inputList = Array.from(
-    newPostForm.querySelectorAll(settings.inputSelector)
-  );
-  inputList.forEach((InputElement) => {
-    hideInputError(newPostForm, InputElement, settings);
-  });
-
-  openModal(newPostModal);
+ resetValidation(newPostForm, settings);
+ openModal(newPostModal);
 });
 
 newPostCloseButton.addEventListener("click", function () {
